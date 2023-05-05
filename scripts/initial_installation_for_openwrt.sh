@@ -6,7 +6,6 @@ opkg update
 opkg install \
   mc \
   nano \
-  lumimqtt \
   mpd-full \
   mosquitto-nossl \
   node \
@@ -28,8 +27,8 @@ sed -i 's/port: 8080/port: 8090/' /etc/zigbee2mqtt/configuration.yaml
 sed -i 's/homeassistant: false/homeassistant: true/' /etc/zigbee2mqtt/configuration.yaml
 echo "Configuration entries in zigbee2mqtt have been added"
 sleep 2
-echo "Downloading the configuration file lumimqtt.json"
-wget https://raw.githubusercontent.com/DivanX10/Openwrt-scripts-for-gateway-zhwg11lm/main/configuration%20files/lumimqtt.json -O /etc/lumimqtt.json
+#echo "Downloading the configuration file lumimqtt.json"
+#wget https://raw.githubusercontent.com/DivanX10/Openwrt-scripts-for-gateway-zhwg11lm/main/configuration%20files/lumimqtt.json -O /etc/lumimqtt.json
 echo "Done"
 sleep 2
 echo "Setting up MPD"
